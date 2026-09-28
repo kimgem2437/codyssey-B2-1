@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Temporary files
+*.tmp
+
+# Test data
+demo_data/
+demo_csv_data/
+test_data/
+empty_data/
+
+# Test CSV files
+demo_*.csv
+test.csv
+range.csv
+september.csv
