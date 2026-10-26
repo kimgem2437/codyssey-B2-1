@@ -607,18 +607,10 @@ class BudgetService:
 
         return f"TX-{next_number:06d}"
 
-    def validate_date(
-        self,
-        date: str
-    ) -> bool:
+    def validate_date(self, date: str) -> bool:
         try:
-            datetime.strptime(
-                date,
-                "%Y-%m-%d"
-            )
-
-            return True
-
+            parsed = datetime.strptime(date, "%Y-%m-%d")
+            return parsed.strftime("%Y-%m-%d") == date
         except ValueError:
             return False
 

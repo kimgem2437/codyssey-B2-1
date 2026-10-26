@@ -259,19 +259,19 @@ python -m budget_app delete --id TX-000003
 CSV Import:
 
 ```bash
-python -m budget_app import --file demo_import.csv
+python -m budget_app import --from demo_import.csv
 ```
 
 CSV Export:
 
 ```bash
-python -m budget_app export --file september.csv --month 2026-09
+python -m budget_app export --out september.csv --month 2026-09
 ```
 
 기간 기준 Export:
 
 ```bash
-python -m budget_app export --file range.csv --from 2026-09-01 --to 2026-09-30
+python -m budget_app export --out range.csv --from 2026-09-01 --to 2026-09-30
 ```
 
 ![CSV Import / Export](docs/images/09-csv.png)
@@ -540,11 +540,11 @@ python -m budget_app category add --name hobby
 python -m budget_app category remove --name hobby
 
 # CSV Import
-python -m budget_app import --file demo_import.csv
+python -m budget_app import --from demo_import.csv
 
 # CSV Export
-python -m budget_app export --file september.csv --month 2026-09
-python -m budget_app export --file range.csv --from 2026-09-01 --to 2026-09-30
+python -m budget_app export --out september.csv --month 2026-09
+python -m budget_app export --out range.csv --from 2026-09-01 --to 2026-09-30
 
 # 다른 데이터 폴더 사용
 python -m budget_app --data-dir test_data list

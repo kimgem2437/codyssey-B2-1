@@ -126,7 +126,9 @@ def create_parser() -> argparse.ArgumentParser:
     )
 
     import_parser.add_argument(
-        "--file",
+        "--from",
+        dest="file",
+        metavar="CSV",
         required=True,
         help="가져올 CSV 파일 경로"
     )
@@ -137,7 +139,9 @@ def create_parser() -> argparse.ArgumentParser:
     )
 
     export_parser.add_argument(
-        "--file",
+        "--out",
+        dest="file",
+        metavar="CSV",
         required=True,
         help="저장할 CSV 파일 경로"
     )
